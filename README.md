@@ -32,8 +32,23 @@ The transformations are made using Python libraries *imgaug* and *numpy*.
 
 <img width="1292" height="418" alt="Screenshot_20260201_203728 copy" src="https://github.com/user-attachments/assets/419fedd2-5430-4a0f-91a5-501097bf6072" />
 
+### Trainning a CNN to discriminate between surrogate classes
 
+Each of the sets of transformed image patches forms a surrogate class. We train a CNN to discriminate between these classes.
 
+We compare two network architectures:
+
+- The smaller network consists of two convolutional layers with 64 filters each, followed by a fully connected layer with 128 units. We can refer to this network as 64c5-64c5-128f.
+
+- The bigger network consists of three consolutional layers with 64, 128 and 256 filters, respectively, followed by a fully connected layer with 512 units. We can refer to this network as 64c5-128c5-256c5-512f.
+
+The last layer of each network is succeeded by a softmax layer, which serves as the network output. In all these models, all convolutional filters are connected to a 5 × 5 region of their input. 2 × 2 max-pooling is performed after the first and second convolutional layers.
+
+### Classification
+
+For classification, we use the $k$-means clustering method from the *sklearn* package. Before clustering, we use the *Isolation Forest* algorithm from the same package to remove the outliers.
+
+<img width="1351" height="447" alt="Screenshot_20260201_224225" src="https://github.com/user-attachments/assets/5b6315dc-3ca3-4827-a3f6-0c2888f60dce" />
 
 ## License
 
