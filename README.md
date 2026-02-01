@@ -50,6 +50,8 @@ For classification, we use the $k$-means clustering method from the *sklearn* pa
 
 <img width="1351" height="447" alt="Screenshot_20260201_224225" src="https://github.com/user-attachments/assets/5b6315dc-3ca3-4827-a3f6-0c2888f60dce" />
 
+For more information, consult the [technical documentation](https://github.com/gershep/Mozgalo/blob/master/technical_documentation.pdf) (in Croatian).
+
 ## Requirements
 
 This project is written in Python. We use the following Python packages:
@@ -63,6 +65,27 @@ To train CNNs, we use **TensorFlow** with an NVIDIA GPU, for which we need the f
 - **CUDA Toolkit**
 - **cuDNN** for deep neural networks
 - **libcupti-dev**
+
+## Usage
+
+To run a Python script, use the command `python3 script.py`.
+
+Here is an overview of all the scripts:
+
+1. `variables.py` contains all the important variables. You need to provide the path to your working directory, where the subfolder `Images` contains the images you want to train on.
+2. `makeAugmentations.py` creates sets of augmented images
+3. `makeLabels.py` creates folders for trainning and validation and populates them
+4. `big_CNN.py` and `small_CNN.py` contain the definitions for the neural networks
+5. `build_image_data.py` converts image data to TFRecords file format with Example protos
+6. `load_train_image.py` loads an image from TFRecords file format
+7. `big_train.py` and `small_train.py` train a CNN and output a model
+8. `makeTest.py` creates the testing folder and populates it
+9. `big_getFeatures.py` and `small_getFeatures.py` learn image features from testing data
+10. `kmeans.py` and `kmeans2.py` classify images based on these features using the $k$-means clustering method
+11. `organize.py` divides the images based on the results of classification
+12.  `paint.py` displays images in a grid
+
+For more information, consult the [user documentation](https://github.com/gershep/Mozgalo/blob/master/user_documentation.pdf) (in Croatian).
 
 ## License
 
