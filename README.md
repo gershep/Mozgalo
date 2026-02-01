@@ -50,6 +50,20 @@ For classification, we use the $k$-means clustering method from the *sklearn* pa
 
 <img width="1351" height="447" alt="Screenshot_20260201_224225" src="https://github.com/user-attachments/assets/5b6315dc-3ca3-4827-a3f6-0c2888f60dce" />
 
+## Requirements
+
+This project is written in Python. We use the following Python packages:
+
+- **imgaug** for image augmentation
+- **SciPy** for scientific computing (contains **Matplotlib** and **NumPy**)
+- **scikit-learn** for machine learning
+
+To train CNNs, we use **TensorFlow** with an NVIDIA GPU, for which we need the following libraries:
+
+- **CUDA Toolkit**
+- **cuDNN** for deep neural networks
+- **libcupti-dev**
+
 ## License
 
 This project is licensed under the [MIT License](https://github.com/gershep/Mozgalo/blob/master/LICENSE).
