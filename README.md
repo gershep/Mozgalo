@@ -40,7 +40,7 @@ We compare two network architectures:
 
 - The smaller network consists of two convolutional layers with 64 filters each, followed by a fully connected layer with 128 units. We can refer to this network as 64c5-64c5-128f.
 
-- The bigger network consists of three consolutional layers with 64, 128 and 256 filters, respectively, followed by a fully connected layer with 512 units. We can refer to this network as 64c5-128c5-256c5-512f.
+- The bigger network consists of three convolutional layers with 64, 128, and 256 filters, respectively, followed by a fully connected layer with 512 units. We can refer to this network as 64c5-128c5-256c5-512f.
 
 The last layer of each network is succeeded by a softmax layer, which serves as the network output. In all these models, all convolutional filters are connected to a 5 × 5 region of their input. 2 × 2 max-pooling is performed after the first and second convolutional layers.
 
