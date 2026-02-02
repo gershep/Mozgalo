@@ -28,7 +28,7 @@ Images are rescaled to 96 × 96 pixels, augmented, and then cropped to its cente
 - Contrast 1: raise saturation and value of all pixels to a power between 0.5 and 2, multiply these values by a factor between 0.7 and 1.4, and add to them a value between −0.1 and 0.1
 - Contrast 2: multiply every RGB component of every pixel by a random factor between 0.5 and 2
 
-The transformations are made using Python libraries *imgaug* and *numpy*.
+The transformations are made using the Python libraries *imgaug* and *numpy*.
 
 <img width="1292" height="418" alt="Screenshot_20260201_203728 copy" src="https://github.com/user-attachments/assets/419fedd2-5430-4a0f-91a5-501097bf6072" />
 
