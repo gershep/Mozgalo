@@ -74,7 +74,7 @@ Here is an overview of all the scripts:
 
 1. `variables.py` contains all the important variables. You need to provide the path to your working directory, where the subfolder `Images` contains the images you want to train on.
 2. `makeAugmentations.py` creates sets of augmented images
-3. `makeLabels.py` creates folders for trainning and validation and populates them
+3. `makeLabels.py` creates folders for training and validation and populates them
 4. `big_CNN.py` and `small_CNN.py` contain the definitions for the neural networks
 5. `build_image_data.py` converts image data to TFRecords file format with Example protos
 6. `load_train_image.py` loads an image from TFRecords file format
