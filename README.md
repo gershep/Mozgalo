@@ -14,7 +14,7 @@ Unsupervised image classification using Convolutional Neural Networks (CNNs) in 
 The implementation consists of three parts:
 
 1. Creating surrogate training data
-2. Trainning a CNN to discriminate between surrogate classes
+2. Training a CNN to discriminate between surrogate classes
 3. Classification
 
 ### Creating surrogate training data
@@ -32,7 +32,7 @@ The transformations are made using Python libraries *imgaug* and *numpy*.
 
 <img width="1292" height="418" alt="Screenshot_20260201_203728 copy" src="https://github.com/user-attachments/assets/419fedd2-5430-4a0f-91a5-501097bf6072" />
 
-### Trainning a CNN to discriminate between surrogate classes
+### Training a CNN to discriminate between surrogate classes
 
 Each of the sets of transformed image patches forms a surrogate class. We train a CNN to discriminate between these classes.
 
